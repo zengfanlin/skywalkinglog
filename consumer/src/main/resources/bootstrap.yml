@@ -1,0 +1,13 @@
+server:
+  port: 17072
+# --------------------------------------------------------------------------------------------
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: consumer-service
+  cloud:
+    # 配置服务发现，分布式配置参数，本地开发时候用本机的地址替代或者直接注释掉，但是请不要上传到git
+    nacos:
+      discovery:
+        server-addr: 172.22.122.21:8848
