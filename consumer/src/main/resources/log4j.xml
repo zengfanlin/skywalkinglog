@@ -85,9 +85,9 @@
         </RollingRandomAccessFile>
 
         <!--        添加我们自己的apender-->
-        <SkywalkingLog name="SkywalkingLog">
-            <PatternLayout pattern="${log_pattern}"/>
-        </SkywalkingLog>
+<!--        <SkywalkingLog name="SkywalkingLog">-->
+<!--            <PatternLayout pattern="${log_pattern}"/>-->
+<!--        </SkywalkingLog>-->
     </appenders>
 
     <loggers>
@@ -129,7 +129,7 @@
             <appender-ref ref="Console"/>
             <appender-ref ref="projectRolling"/>
             <appender-ref ref="projectErrorRolling"/>
-            <appender-ref ref="SkywalkingLog"/>
+<!--            <appender-ref ref="SkywalkingLog"/>-->
         </Logger>
 
         <AsyncRoot level="${LOGGER_LEVEL}">
@@ -137,7 +137,7 @@
             <appender-ref ref="projectRolling"/>
             <appender-ref ref="projectErrorRolling"/>
             <!--            这里也注意加一下-->
-            <appender-ref ref="SkywalkingLog"/>
+<!--            <appender-ref ref="SkywalkingLog"/>-->
         </AsyncRoot>
     </loggers>
 </configuration>
