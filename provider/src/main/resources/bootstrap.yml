@@ -10,6 +10,6 @@ spring:
     # 配置服务发现，分布式配置参数，本地开发时候用本机的地址替代或者直接注释掉，但是请不要上传到git
     nacos:
       discovery:
-        server-addr: 192.168.32.1:8848
+        server-addr: 172.22.122.21:8848
 logging:
   config: classpath:logback-spring.xml
