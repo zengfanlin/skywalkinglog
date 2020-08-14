@@ -56,13 +56,13 @@
             <level>ERROR</level>
         </filter>
     </appender>
-    <appender name="skywlog" class="com.example.consumer.SkLogAppender">
+    <appender name="skywlog" class="com.geely.logbackskywalking.appender.SkLogAppender">
     </appender>
     <!-- Level: FATAL 0  ERROR 3  WARN 4  INFO 6  DEBUG 7 -->
     <root level="INFO">
         <appender-ref ref="console" />
         <appender-ref ref="debug" />
         <appender-ref ref="error" />
-<!--        <appender-ref ref="skywlog"/>-->
+        <appender-ref ref="skywlog"/>
     </root>
 </configuration>

@@ -18,12 +18,13 @@ public class ProTestController {
     Random random=new Random();
     @GetMapping("provider/getname")
     public String GetName(@RequestParam("name") String name) throws Exception {
-        log.info("被调用");
+        log.info("业务日志：被调用");
         int i=random.nextInt(10);
         if(i/2==0){
-            log.error("尝试除以零");
+            log.error("报错：尝试除以零");
             throw  new Exception("尝试除以零");
         }
+        log.info("业务日志：被调用成功："+name);
         return name+"--"+getNowDate();
     }
 

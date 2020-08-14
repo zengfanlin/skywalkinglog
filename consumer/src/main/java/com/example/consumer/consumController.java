@@ -15,8 +15,9 @@ public class consumController {
 
     @GetMapping("consumer/getname")
     public String getName(@RequestParam("name")String name) {
-        log.info("开始调用");
+        log.info("业务日志：开始调用");
         String s = service.getName(name);
+        log.info("业务日志：调用成功："+s);
         return s;
     }
 }
